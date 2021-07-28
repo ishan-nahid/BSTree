@@ -97,8 +97,8 @@ void post_order(Node *node)
 	{
 		return;
 	}
-	pre_order(node->left);
-	pre_order(node->right);
+	post_order(node->left);
+	post_order(node->right);
 
 	cout << node->data << endl;
 }
@@ -109,7 +109,7 @@ void in_order(Node *node)
 	{
 		return;
 	}
-	pre_order(node->left);
+	in_order(node->left);
 	cout << node->data << endl;
-	pre_order(node->right);
+	in_order(node->right);
 }
